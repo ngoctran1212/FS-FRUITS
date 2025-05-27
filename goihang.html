@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trái Cây Và Hoa Tươi Nhập Khẩu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="chibi1 - Copy.png" type="image/x-icon">
+
+  <style>
+    body {
+      background-color: #1a571a;
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 70px;}
+
+    .cart-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .product-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .table td, .table th {
+      vertical-align: middle;
+    }
+
+    .btn-remove {
+      color: red;
+      font-weight: bold;
+    }
+
+    .total-box {
+      text-align: right;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .checkout-btn {
+      float: right;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .product-img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="BAOCAO1.html">Trang Chủ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="gioithieu.html">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="sanpham.html">Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="lienhe.html">Liên hệ</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownChinhSach" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Chính sách & Quy định
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownChinhSach">
+              <li><a class="dropdown-item" href="chinhsach.html">Chính sách chung</a></li>
+              <li><a class="dropdown-item" href="doitra.html">Chính sách đổi trả</a></li>
+              <li><a class="dropdown-item" href="baomat.html">Chính sách bảo mật</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goihang.html"><i class="bi bi-cart3"></i></a>
+          </li>
+                                      <li class="nav-item">
+                                <a class="nav-link" href="dangnhap.html"><i class="bi bi-person-circle text-white"></i></a>
+                            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="hoaCarousel" class="carousel slide container mt-3" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="anh1.jpg" alt="Hoa 1">
+      </div>
+      <div class="carousel-item">
+        <img src="anh2.avif" alt="Hoa 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>100% trái cây tươi nhập khẩu</h5>
+          <p>Sang trọng và tinh tế.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="anh3.avif" alt="Hoa 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Đủ loại hoa trong ngoài nước</h5>
+          <p>Nhẹ nhàng và đầy duyên dáng.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="anh4.jpg" alt="Hoa 4">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Gọn nhẹ sang đẹp đầy tinh tế</h5>
+          <p>Thích hợp mọi dịp lễ.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#hoaCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hoaCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <div class="container cart-container">
+    <h3 class="text-success mb-4">🛒 Giỏ Hàng Của Bạn</h3>
+    
+    <table class="table table-hover align-middle">
+      <thead class="table-success">
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Thành tiền</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center">
+              <img src="tao1.avif" class="product-img me-3">
+              <span>Táo </span>
+            </div>
+          </td>
+          <td>50.000₫</td>
+          <td><input type="number" class="form-control" value="2" min="1" style="width: 70px;"></td>
+          <td>100.000₫</td>
+          <td><button class="btn btn-outline-danger btn-sm btn-remove">X</button></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center">
+              <img src="qua9.jpg"class="product-img me-3">>
+              <span>Dứa Queen</span>
+            </div>
+          </td>
+          <td>25.000₫</td>
+          <td><input type="number" class="form-control" value="1" min="1" style="width: 70px;"></td>
+          <td>25.000₫</td>
+          <td><button class="btn btn-outline-danger btn-sm btn-remove">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total-box">
+      <strong>Tổng cộng: <span class="text-danger">125.000₫</span></strong>
+    </div>
+
+    <button class="btn btn-success checkout-btn">Thanh toán</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
